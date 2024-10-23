@@ -30,6 +30,7 @@ header h1 {
     overflow: hidden;
     width: 500px;
     height: 600px;
+    margin-top: 50px;
     transform: translateX(-120px);
 }
 
@@ -40,7 +41,7 @@ header h1 {
     overflow: hidden;
     width: 300px;
     height: 300px;
-    transform: translateY(-160px);
+    transform: translateY(-35px);
 }
 
 .map img {
@@ -63,18 +64,17 @@ header h1 {
 
 .player-status {
     justify-content: center;
-    background-color: grey;
-    border: 4px black solid;
-    border-radius: 8px;
+    background-image: url('images/void.png');
+    border: 4px white solid;
     overflow: hidden;
     width: 90%;
-    margin-bottom: 10px;
     padding: 10px;
 }
 
 .player-status li {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .player-status img {
@@ -88,13 +88,22 @@ header h1 {
         overflow: scroll;
     }
 
+    .wrapper {
+        display: block;
+        margin: 0 auto;
+    }
+
     .status {
         display: block;
         margin: 0 auto;
         transform: translateY(0);
         transform: translateX(0);
         width: 100%;
+        height: 500px;
+    }
 
+    .player-status {
+        margin: 0 auto;
     }
 
     .map {
@@ -103,5 +112,6 @@ header h1 {
         width: 100%;
         transform: translateY(0);
         transform: translateX(0);
+        height: 90%;
     }
 }
