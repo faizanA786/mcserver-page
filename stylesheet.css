@@ -1,32 +1,53 @@
+@font-face {
+    font-family: minecraft;
+    src: url("fonts/minecraftfont.woff");
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    overflow: hidden;
+    font-family: minecraft;
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
     margin: 0;
 }
 
 .wrapper {
-    display: block;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
 }
 
-.header h1 {
+header h1 {
+    display: block;
     text-align: center;
     padding: 10px;
 }
 
 .status {
-    display: flex;
-    float: left;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1000px;
-    margin-left: -500px;
-    align-items: center;
-    border: 7px black solid;
-    border-radius: 16px;
+    display: inline-block;
     overflow: hidden;
-    width: 200%;
+    width: 500px;
+    height: 600px;
+    margin-top: 50px;
+    transform: translateX(-120px);
+}
+
+.map {
+    display: inline-block;
+    max-width: 400px;
+    align-items: center;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-35px);
+}
+
+.map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .status h2 {
@@ -43,17 +64,17 @@ body {
 
 .player-status {
     justify-content: center;
-    border: 4px black solid;
-    border-radius: 8px;
+    background-image: url('images/void.png');
+    border: 4px white solid;
     overflow: hidden;
     width: 90%;
-    margin-bottom: 10px;
     padding: 10px;
 }
 
 .player-status li {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .player-status img {
@@ -61,59 +82,36 @@ body {
     padding: 5px;
 }
 
-.map {
-    display: flex;
-    float: right;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 800px;
-    margin-right: -400px;
-    margin-top: 100px;
-    align-items: center;
-    border: 7px black solid;
-    border-radius: 16px;
-    overflow: hidden;
-    width: 25vw;
-    height: 50vh;
-}
-
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
 
     body {
-        display: inline-flex;
-        align-items: center;
+        overflow: scroll;
     }
 
-    img {
-        width: 40px;               
+    .wrapper {
+        display: block;
+        margin: 0 auto;
     }
 
-    header {
-        position: relative;
-        font-size: 20px;
-        float: none;
-        margin: 0;
-    }
-    
     .status {
-        float: none;
-        margin: 0;
-        width: 90vw;                
-        padding: 10px;  
-        margin-bottom: 10px;  
+        display: block;
+        margin: 0 auto;
+        transform: translateY(0);
+        transform: translateX(0);
+        width: 100%;
+        height: 500px;
     }
 
     .player-status {
-        margin: 0;
-        margin-bottom: 10px;
-        padding: 5px;
+        margin: 0 auto;
     }
 
     .map {
-        float: none;
-        margin: 0;
-        width: 90vw;    
-        height: 40vh;            
-        padding: 10px;  
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        transform: translateY(0);
+        transform: translateX(0);
+        height: 90%;
     }
 }

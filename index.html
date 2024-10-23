@@ -4,38 +4,97 @@
     <meta charset="UTF-8">
     <meta name="author" content="Faizan">
     <link rel="stylesheet" href="stylesheet.css">
-    <link rel="icon" href="">
+    <link rel="icon" href="images\heads\favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Our Server</title>
 </head>
 <body>
+    <header><h1 style="color: white;">Our minecraft SMP</h1></header>
     <div class="wrapper">
-        <header><h1>Our minecraft SMP</h1></header>
-        <main>  
-            <div class="status">
-                <h2>Players</h2>
-                <div class="player-status">
-                    <h3>Players Online</h3>
-                    <ul>
-                        <li><img src="images\steve-head.png">Player 1 (1 hour, 2 minutes)</li>
-                        <li><img src="images\steve-head.png">Player 2</li>
-                        <li><img src="images\steve-head.png">Player 3</li>
-                    </ul>
-                </div>
-                <div class="player-status">
-                    <h3>Players Offline</h3>
-                    <ul>
-                        <li><img src="images\steve-head.png">Player 1 (Last seen:)</li>
-                        <li><img src="images\steve-head.png">Player 2</li>
-                        <li><img src="images\steve-head.png">Player 3</li>
-                    </ul>
-                </div>
+        <div class="status">
+            <div class="player-status">
+                <h3 style="color: lime;">Player Status</h3>
+                <ul>
+                    <li id="vegetprovath100" style="color: purple;"><img src="images\heads\vegetprovath100.png">vegetprovath100<img class="status-icon" src="images\offline.png"></li>
+                    <li id="Outlaw_F" style="color: aqua;"><img src="images\heads\outlaw_f.png">Outlaw_F<img class="status-icon" src="images\offline.png"></li>
+                    <li id="Horrid_Henry" style="color: gold;"><img src="images\heads\horrid_henry.png">Horrid_Henry<img class="status-icon" src="images\offline.png"></li>
+                    <li id="puneet_sui" style="color: green;"><img src="images\heads\puneet_sui.png">puneet_sui<img class="status-icon" src="images\offline.png"></li>
+                    <li id="PepsimanOfDoom" style="color: maroon;"><img src="images\heads\pepsimanofdoom.png">PepsimanOfDoom<img class="status-icon" src="images\offline.png"></li>
+                    <li id="Adnan2004" style="color: grey;"><img src="images\heads\adnan2004.png">Adnan2004<img class="status-icon" src="images\offline.png"></li>
+                </ul>
             </div>
-            <div class="map">
-                <img src="images\map.png">
-            </div>
-        </main>
-        <footer>Faizan Ahmed</footer>
+        </div>
+
+        <div class="map">
+            <a href="http://88.198.9.27:25604/#">
+            <img src="images\map-cover.png"> 
+            </a>
+        </div>
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const serverIP = '88.198.9.27:40062';  // Replace with your actual Minecraft server IP
+
+            // Function to fetch online players from mcsrvstat.us API
+            function fetchPlayerStatus() {
+                fetch(`https://api.mcsrvstat.us/2/${serverIP}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const playersOnline = data.players && data.players.list ? data.players.list : [];
+                        updatePlayerStatus(playersOnline);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching player status:', error);
+                    });
+            }
+
+            // Function to update the DOM with online/offline status icons
+            function updatePlayerStatus(playersOnline) {
+                // Mapping player IDs to their in-game names in the HTML
+                const allPlayers = {
+                    vegetprovath100: 'vegetprovath100',
+                    Outlaw_F: 'Outlaw_F',
+                    Horrid_Henry: 'Horrid_Henry',
+                    puneet_sui: 'puneet_sui',
+                    PepsimanOfDoom: 'PepsimanOfDoom',
+                    Adnan2004: 'Adnan2004'
+                };
+
+                // Iterate through each player in the HTML
+                for (const [playerId, playerName] of Object.entries(allPlayers)) {
+                    const playerElement = document.getElementById(playerId);
+                    
+                    // Check if the player element exists in the DOM
+                    if (playerElement) {
+                        // Find the icon element for the player's status
+                        const statusIcon = playerElement.querySelector('.status-icon');
+                        
+                        // If the statusIcon is null, log an error for easier debugging
+                        if (!statusIcon) {
+                            console.error(`No .status-icon found for player ID '${playerId}'`);
+                            continue;
+                        }
+
+                        // Check if the player is online
+                        const isOnline = playersOnline.includes(playerName);
+                        
+                        // Update the status icon: green if online, red if offline
+                        statusIcon.src = isOnline ? 'images/online.png' : 'images/offline.png';
+                        statusIcon.alt = isOnline ? 'Online' : 'Offline';
+                    } else {
+                        console.error(`Player element with ID '${playerId}' not found`);
+                    }
+                }
+            }
+
+            // Fetch player status every 30 seconds
+            setInterval(fetchPlayerStatus, 30000);
+
+            // Initial fetch when the page loads
+            fetchPlayerStatus();
+        });
+    </script>
 </body>
 </html>
