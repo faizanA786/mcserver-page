@@ -60,6 +60,7 @@ a {
     list-style-type: square;
 }
 
+
 .map img {
     width: 100%;
     height: 100%;
@@ -122,5 +123,9 @@ a {
         transform: translateX(0);
         height: 100%;
         margin-bottom: 10px;
+    }
+
+    .link {
+        margin-bottom: 15px;
     }
 }
