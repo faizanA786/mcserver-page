@@ -3,13 +3,15 @@
     src: url("fonts/minecraftfont.woff");
 }
 
-body {
+html, body {
     overflow: hidden;
     font-family: minecraft;
-    background-image: url("images/background.png");
+    background-image: url("images/background2.png");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
+    height: 100%;
 }
 
 .wrapper {
@@ -20,10 +22,13 @@ body {
    text-align: center;
 }
 
-header h1 {
+header {
     display: block;
     text-align: center;
-    padding: 10px;
+}
+
+header p {
+    font-size: 25px;
 }
 
 .status {
@@ -42,14 +47,19 @@ header h1 {
     align-items: center;
     overflow: hidden;
     width: 400px;
-    height: 450px;
+    height: 100%;
     transform: translate(10px, -25px);
 }
 
 .news {
-    border-bottom: 5px dashed white;
+    border-bottom: 3px solid white;
     color: white;
     text-align: left;
+}
+
+.link {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 a {
@@ -59,6 +69,7 @@ a {
 .news ul {
     list-style-type: square;
 }
+
 
 .map img {
     width: 100%;
@@ -88,6 +99,11 @@ a {
 .player-status img {
     margin-right: 15px;
     padding: 5px;
+}
+
+footer {
+    text-align: center;
+    color: white;
 }
 
 @media (max-width: 1200px) {
