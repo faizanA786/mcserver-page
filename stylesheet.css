@@ -6,7 +6,7 @@
 html, body {
     overflow: hidden;
     font-family: minecraft;
-    background-image: url("images/background2.png");
+    background-image: url("images/background3.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -37,7 +37,7 @@ header p {
     width: 500px;
     height: 550px;
     margin-top: 50px;
-    transform: translateX(-45px);
+    transform: translateX(-60px);
 }
 
 .server {
