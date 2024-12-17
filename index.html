@@ -15,10 +15,10 @@
             <div class="player-status">
                 <p style="color: lime; font-size:20px;">Player Status</p>
                 <ul>
-                    <li id="Adnan2004" style="color: grey;"><img src="images\heads\adnan2004.png">Adnan2004<img class="status-icon" src="images\offline.png"></li>
+                    <li id="Adnan2004" style="color: grey;"><img src="images\heads\adnan2004.png"><s>Adnan2004</s><img class="status-icon" src="images\removed.png"></li>
                     <li id="Horrid_Henry" style="color: gold;"><img src="images\heads\horrid_henry.png">Horrid_Henry<img class="status-icon" src="images\offline.png"></li>
                     <li id="Outlaw_F" style="color: aqua;"><img src="images\heads\outlaw_f.png">Outlaw_F<img class="status-icon" src="images\offline.png"></li>
-                    <li id="puneet_sui" style="color: #00b503;"><img src="images\heads\puneet_sui.png">puneet_sui<img class="status-icon" src="images\offline.png"></li>
+                    <li id="puneet_sui" style="color: grey;"><img src="images\heads\puneet_sui.png"><s>puneet_sui</s><img class="status-icon" src="images\removed.png"></li>
                     <li id="PepsimanOfDoom" style="color: #eb2a2d;"><img src="images\heads\pepsimanofdoom.png">PepsimanOfDoom<img class="status-icon" src="images\offline.png"></li>
                     <li id="vegetprovath100" style="color: #d60aff;"><img src="images\heads\vegetprovath100.png">vegetprovath100<img class="status-icon" src="images\offline.png"></li>
                 </ul>
@@ -74,10 +74,8 @@
             function updatePlayerStatus(playersOnline) {
                 // Mapping player IDs to their in-game names in the HTML
                 const allPlayers = {
-                    Adnan2004: 'Adnan2004',
                     Horrid_Henry: 'Horrid_Henry',
                     Outlaw_F: 'Outlaw_F',
-                    puneet_sui: 'puneet_sui',
                     PepsimanOfDoom: 'PepsimanOfDoom',
                     vegetprovath100: 'vegetprovath100',
                 };
