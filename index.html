@@ -10,43 +10,43 @@
 </head>
 <body>
     <div class="wrapper">
-        <header><p style="color: white;"><em><u>Java / Fabric 1.21.3</u></em></p></header>
+        <header><h1 class="rainbow">Java / Fabric 1.21.3</h1></header>
         <div class="container">
             <div class="player-status">
-                <p style="color: lime; font-size:1.25rem;">Player Status (4)</p>
+                <p style="color: lime;">Player Status (4)</p>
                 <ul>
-                    <li id="Horrid_Henry" style="color: gold;"><img src="images\heads\horrid_henry.png">Horrid_Henry<img class="status-icon" src="images\offline.png"></li>
-                    <li id="Outlaw_F" style="color: aqua;"><img src="images\heads\outlaw_f.png">Outlaw_F<img class="status-icon" src="images\offline.png"></li>
-                    <li id="PepsimanOfDoom" style="color: #eb2a2d;"><img src="images\heads\pepsimanofdoom.png">PepsimanOfDoom<img class="status-icon" src="images\offline.png"></li>
-                    <li id="vegetprovath100" style="color: #d60aff;"><img src="images\heads\vegetprovath100.png">vegetprovath100<img class="status-icon" src="images\offline.png"></li>
+                    <li id="Horrid_Henry"><img src="images\heads\horrid_henry.png">Horrid_Henry<img class="status-icon" src="images\offline.png"></li>
+                    <li id="Outlaw_F"><img src="images\heads\outlaw_f.png">Outlaw_F<img class="status-icon" src="images\offline.png"></li>
+                    <li id="PepsimanOfDoom"><img src="images\heads\pepsimanofdoom.png">PepsimanOfDoom<img class="status-icon" src="images\offline.png"></li>
+                    <li id="vegetprovath100"><img src="images\heads\vegetprovath100.png">vegetprovath100<img class="status-icon" src="images\offline.png"></li>
                 </ul>
             </div>
 
             <div class="server">
-                <p style="color:#fbff0a; font-size:1.25rem;">Info</p>
+                <p style="color:#fbff0a;">Info</p>
                 <div class="news">
                     <ul>
                         <li>You can join with any loader as long as your on the correct version.</li>
                         <li>If you want vc functionality, install the correct fabric version and download the mods in 'optional mods'.</li>
                     </ul>
                 </div>
-                <p style="color: #0aff89; font-size:1.25rem;">Planned</p>
+                <p style="color: #0aff89;">Planned</p>
                 <div class="news">
                     <ul>
                         <li>Update to 1.21.5 upon release.</li>
                     </ul>
                 </div>
                 <div class="link">
-                    <p style="color: #f76dc2; font-size:1.25rem;">Links</p>
+                    <p style="color: #f76dc2;">Links</p>
                     <ul>
                         <a href="https://drive.google.com/file/d/10b0lUsn-0ehfz1UUBzK4qJRePcC4Y_p2/view?usp=drive_link" target="_blank">Optional Mods</a>
-                        <a href="http://88.198.15.205:40031/#" target="_blank">Dynamic Map</a>
+                        <a href="http://88.198.15.205:40031/#">Dynamic Map</a>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <footer><a href="https://github.com/faizanA786/mcserver-page">src</a></footer>
+        <footer><a href="https://github.com/faizanA786/mcserver-page" target="_blank">src</a></footer>
     </div>
 
     <script>
@@ -103,8 +103,8 @@
                 }
             }
 
-            // Fetch player status every 30 seconds
-            setInterval(fetchPlayerStatus, 30000);
+            // Fetch player status every 10 seconds
+            setInterval(fetchPlayerStatus, 10000);
 
             // Initial fetch when the page loads
             fetchPlayerStatus();
