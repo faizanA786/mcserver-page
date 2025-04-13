@@ -83,17 +83,17 @@ header h1 {
 
 .server {
     background-image: url("images/void.png");
-    border: 0.25rem solid white;
     align-items: center;
     width: 35rem;
     border-radius: 0.8rem;
+    border: 0.05rem white solid;
 }
 
 .player-status {
     justify-content: center;
     width: 30rem;
     background-image: url('images/void.png');
-    border: 0.25rem white solid;
+    border: 0.05rem white solid;
     padding: 0.5rem;
     border-radius: 0.8rem;
 }
@@ -124,7 +124,7 @@ header h1 {
 }
 
 .news {
-    border-bottom: 0.1875rem double white;
+    border-bottom: 0.05rem solid white;
     color: white;
     text-align: left;
 }

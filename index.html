@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header><h1 class="rainbow">Java / Fabric 1.21.3</h1></header>
+        <header><h1 class="rainbow">Java / Fabric 1.21.5</h1></header>
         <div class="container">
             <div class="player-status">
                 <p style="color: lime;">Player Status (4)</p>
@@ -33,14 +33,14 @@
                 <p style="color: #0aff89;">Planned</p>
                 <div class="news">
                     <ul>
-                        <li>Update to 1.21.5 upon release.</li>
+                        <li>Update to new version upon release.</li>
                     </ul>
                 </div>
                 <div class="link">
                     <p style="color: #f76dc2;">Links</p>
                     <ul>
-                        <a href="https://drive.google.com/file/d/10b0lUsn-0ehfz1UUBzK4qJRePcC4Y_p2/view?usp=drive_link" target="_blank">Optional Mods</a>
-                        <a href="http://88.198.15.205:40031/#">Dynamic Map</a>
+                        <a href="https://drive.google.com/file/d/1TZwIgKB6sB-7pdRZhsl6gaSzhThSqWx3/view?usp=sharing" target="_blank">Optional Mods</a>
+                        <a href="http://88.198.15.205:40031/#">Blue Map</a>
                     </ul>
                 </div>
             </div>
@@ -103,8 +103,8 @@
                 }
             }
 
-            // Fetch player status every 10 seconds
-            setInterval(fetchPlayerStatus, 10000);
+            // Fetch player status
+            setInterval(fetchPlayerStatus, 1000);
 
             // Initial fetch when the page loads
             fetchPlayerStatus();
